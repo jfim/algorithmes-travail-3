@@ -1,0 +1,74 @@
+\documentclass[11pt,addpoints]{exam}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{sourcecodepro}
+\usepackage{enumitem}
+\usepackage{todonotes}
+\usepackage{parskip}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+
+\begin{document}
+\title{Algorithmes et structures de données: Travail 3 --- Structures de données linéaires}
+\author{}
+\date{\vspace{-0.5in}}
+\maketitle
+\begin{center}
+\fbox{\parbox{5.5in}{\centering
+Ce travail compte pour 4\% de la session et porte sur les structures de données linéaires. Le code source pour le travail est disponible à \url{https://github.com/jfim/algorithmes-travail-3}. Vous ne pouvez pas utiliser les fonctions de la librairie standard.
+Vous devez remettre votre fichier \texttt{travail3.cpp} par LÉA avant le début du cours du 14 avril. La version papier du document doit être remise au début du cours du 14 avril.}}
+\end{center}
+\vspace{0.1in}
+\makebox[\textwidth]{Nom:\enspace\hrulefill}
+\begin{questions}
+
+\question[12]
+Comme vu dans le cours, un vecteur est une
+structure linéaire redimensionnable qui possède les mêmes caractéristiques de
+performance qu'un tableau. Une liste chaînée est aussi une structure linéaire, mais avec des caractéristiques de performance différentes.
+
+\begin{parts}
+\part
+Implementez un vecteur. La fonction {\tt AjouteElement} prend en paramètre un index. S'il vaut -1, vous devez ajouter l'élément à la fin du vecteur. Sinon, vous devez l'insérer au bon index. Par exemple, si le vecteur contient les valeurs 1, 3 et 5, puis qu'on insère la valeur 8 à l'index 2, il contiendra les valeurs 1, 3, 8 et 5 (le premier élément possède l'index 0).
+\part
+Implementez une liste chaînée. L'interface est la même que celle du vecteur.
+\end{parts}
+
+\question[2]
+Dans l'évaluation de votre liste chaînée, l'on supprime le premier million d'éléments de la liste chaînée. Selon vous, est-ce que cette opération est plus rapide avec un vecteur? Expliquez pourquoi.
+\begin{oneparcheckboxes}
+\choice Oui
+\choice Non
+\end{oneparcheckboxes}
+\makeemptybox{\stretch{1}}
+\newpage
+
+\question[2]
+Votre liste chaînée possède un pointeur vers le dernier nœud. Selon vous, si la liste chaînée ne garde pas de pointeur vers le dernier nœud, est-ce que la performance de la liste chaînée sera affectée? Expliquez pourquoi.
+\makeemptybox{\stretch{1}}
+
+\question[2]
+La liste chaînée et le vecteur possèdent les deux un temps d'exécution de $O(1)$ pour l'insertion à la fin de la structure de données. Cependant, le vecteur prend moins de temps pour insérer 25 millions d'éléments que la liste chaînée. Ne devraient-ils pas avoir la même performance? Expliquez votre raisonnement.
+
+\makeemptybox{\stretch{1}}
+
+\question
+Selon vous, entre la liste chaînée et le vecteur:
+\begin{parts}
+\part[1]Laquelle consomme le moins de mémoire?
+\begin{oneparcheckboxes}
+\choice Liste chaînée
+\choice Vecteur
+\end{oneparcheckboxes}
+\part[1]Laquelle est la plus rapide pour trouver si une valeur existe?
+\begin{oneparcheckboxes}
+\choice Liste chaînée
+\choice Vecteur
+\end{oneparcheckboxes}
+\end{parts}
+\end{questions}
+\end{document}
